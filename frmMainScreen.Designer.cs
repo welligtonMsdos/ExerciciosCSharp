@@ -48,6 +48,7 @@
             txtCelsius = new TextBox();
             lblCelsius = new Label();
             pnlList = new Panel();
+            lblListReturn = new Label();
             btnToCheckList = new Button();
             lblList = new Label();
             pnlTitle.SuspendLayout();
@@ -171,6 +172,7 @@
             btnToCheckDate.TabIndex = 3;
             btnToCheckDate.Text = "Verificar";
             btnToCheckDate.UseVisualStyleBackColor = true;
+            btnToCheckDate.Click += btnToCheckDate_Click;
             // 
             // mskDate
             // 
@@ -252,6 +254,7 @@
             // 
             // pnlList
             // 
+            pnlList.Controls.Add(lblListReturn);
             pnlList.Controls.Add(btnToCheckList);
             pnlList.Controls.Add(lblList);
             pnlList.Font = new Font("Arial Narrow", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -261,6 +264,14 @@
             pnlList.TabIndex = 4;
             pnlList.Visible = false;
             // 
+            // lblListReturn
+            // 
+            lblListReturn.AutoSize = true;
+            lblListReturn.Location = new Point(21, 131);
+            lblListReturn.Name = "lblListReturn";
+            lblListReturn.Size = new Size(0, 20);
+            lblListReturn.TabIndex = 4;
+            // 
             // btnToCheckList
             // 
             btnToCheckList.Location = new Point(125, 90);
@@ -269,6 +280,7 @@
             btnToCheckList.TabIndex = 3;
             btnToCheckList.Text = "Converter";
             btnToCheckList.UseVisualStyleBackColor = true;
+            btnToCheckList.Click += btnToCheckList_Click;
             // 
             // lblList
             // 
@@ -318,7 +330,6 @@
         public Panel pnlEvenOrOdd;
         public Panel pnlDate;
         private Label lblData;
-        private MaskedTextBox mskDate;
         private Button btnToCheckDate;
         public Panel pnlConvert;
         private Label txtConvertFor;
@@ -329,5 +340,7 @@
         public Panel pnlList;
         public ComboBox cmbTemp;
         public TextBox txtCelsius;
+        public MaskedTextBox mskDate;
+        public Label lblListReturn;
     }
 }
